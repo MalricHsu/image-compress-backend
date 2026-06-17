@@ -9,7 +9,7 @@ const PORT = 3000;
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://你的前端網域.vercel.app",
+  "https://image-compress-frontend.vercel.app/",
 ];
 
 app.use(
