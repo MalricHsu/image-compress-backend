@@ -68,7 +68,7 @@ app.post("/upload", async (req, res) => {
         : originalFormat;
 
     // 先建立 sharp 處理物件(還沒輸出)
-    const sharpInstance = sharp(uploadedFile.filepath).resize({ width: width });
+    let sharpInstance = sharp(uploadedFile.filepath).resize({ width: width });
     // 根據 format 動態決定輸出方式
     if (format === "jpeg") {
       sharpInstance = sharpInstance.jpeg({ quality: quality });
